@@ -1912,30 +1912,29 @@ input, select, textarea {
 
   #countdown-table {
     display: table;
-    margin:auto; /* Ajustez la marge selon vos préférences */
+    margin:auto;
   }
 
   #countdown-label,
   #countdown-timer {
     display: table-cell;
-    padding: 10px;
+    padding: 2px;
     text-align: center;
     font-size: 18px; /* Ajustez la taille de police selon vos préférences */
   }
 
   #countdown-label {
-    background-color: #544e4e00; /* Couleur de fond pour le label */
-    color: #ffffff; /* Couleur du texte pour le label */
-	font-family: 'Courier New', Courier, monospace;
+    background-color: #080a05a1; /* Couleur de fond pour le label */
+    color:rgb(255, 255, 255);
   }
 
   #countdown-timer {
-   
-    font-family: 'Courier New', Courier, monospace; /* Police de caractères pour le timer */
+    background-color: #080a05a1; 
+    font-family: 'Courier New', Courier, monospace; 
     font-weight: bold;
-    font-size: 19px; /* Ajustez la taille de police pour les chiffres du timer */
+    font-size: 19px; 
     letter-spacing: 3px; /* Espacement entre les caractères pour un aspect plus stylisé */
-    color: #c3f093; /* Couleur du texte pour le timer */
+    color:rgb(215, 198, 124);
   }
 
   /* --------------tableau planning ------------------ */
