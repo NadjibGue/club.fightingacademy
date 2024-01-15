@@ -9,6 +9,7 @@ Bienvenue sur le site web de la Fighting Academy, votre destination pour des act
 - [Planning](#planning)
 - [Adhésion](#adhésion)
 - [Contact](#contact)
+- [Licence](#licence)
 
 ## À propos
 
@@ -30,8 +31,12 @@ Rejoignez la Fighting Academy dès aujourd'hui pour profiter de nos programmes e
 
 Pour toute question ou pour vous inscrire, n'hésitez pas à nous contacter. Nous sommes là pour vous aider à atteindre vos objectifs de remise en forme.
 
+## Licence
+
+Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
+
 ---
 
-**Adresse :** 1pl alfred sauvey cugnaux
-**Téléphone :** 
-**Email :** fighting.academy3@gmail.com
+**Adresse :** 1 PL ALFRED SAUVY, 31270 CUGNAUX
+**Téléphone :** 07 82 69 59 86
+**Email :** fighting.academy@gmail.fr
