@@ -1,0 +1,45 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+#logo {
+  width: 100px; /* Ajustez la largeur du logo selon vos besoins */
+}
+
+#entreprise {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#formulaire,
+#infosSupplementaires {
+  margin: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: #007bff;
+}

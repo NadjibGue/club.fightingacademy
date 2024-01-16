@@ -224,3 +224,82 @@ setInterval(updateCountdown, 1000);
 
 // Appeler la fonction une fois au chargement de la page pour éviter un délai initial
 updateCountdown();
+
+//-----------Formulaire d'inscriprtion
+// Formulaire d'inscription
+function sauvegarder(event) {
+  // Prevent default form submission
+  event.preventDefault();
+
+  // Get the form and all input elements
+  var form = document.getElementById("inscriptionForm");
+  var inputs = form.querySelectorAll("input[required], select[required]");
+
+  // Check if all required fields are filled
+  var allFieldsFilled = true;
+  inputs.forEach(function (input) {
+    if (!input.value) {
+      allFieldsFilled = false;
+    }
+  });
+
+  if (allFieldsFilled) {
+    // If all required fields are filled, show the confirmation message
+    var confirmation = document.querySelector(".confirmation");
+    confirmation.style.display = "block";
+
+    // Show the "Imprimer" button
+    var imprimerButton = document.querySelector('button[type="button"]');
+    imprimerButton.style.display = "block";
+  } else {
+    // If any required field is not filled, you can display an error message or take other actions
+    alert("Veuillez remplir tous les champs obligatoires.");
+  }
+}
+
+// script.js
+function Imprimer() {
+  // Récupérer les valeurs des champs du formulaire
+  var form = document.getElementById("inscriptionForm");
+  var formData = {
+    nom: form.nom.value,
+    prenom: form.prenom.value,
+    dateNaissance: form.dateNaissance.value,
+    tel: form.tel.value,
+    adresseMail: form.adresseMail.value,
+    adressePostal: form.adressePostal.value,
+    disciplines: getSelectedOptions("disciplines"),
+  };
+
+  // Stocker les données dans localStorage
+  localStorage.setItem("formulaireData", JSON.stringify(formData));
+
+  // Ouvrir la page impression.html dans une nouvelle fenêtre
+  window.open("impression.html", "_blank");
+}
+
+// Fonction auxiliaire pour récupérer les options sélectionnées
+function getSelectedOptions(id) {
+  var select = document.getElementById(id);
+  var selectedOptions = [];
+  for (var i = 0; i < select.options.length; i++) {
+    if (select.options[i].selected) {
+      selectedOptions.push(select.options[i].value);
+    }
+  }
+  return selectedOptions.join(", ");
+}
+
+// -----article adesion
+
+document.getElementById("btnTarifs").addEventListener("click", function () {
+  document.getElementById("tarifsContent").style.display = "block";
+  document.getElementById("inscriptionContent").style.display = "none";
+});
+
+document
+  .getElementById("btnInscription")
+  .addEventListener("click", function () {
+    document.getElementById("tarifsContent").style.display = "none";
+    document.getElementById("inscriptionContent").style.display = "block";
+  });
