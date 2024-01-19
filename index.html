@@ -4,16 +4,16 @@
     <title>Fighting Academy</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>    
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href="./images/logo/logo.png" type="icon"/>
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+    <noscript><link rel="stylesheet" href="./assets/css/noscript.css"/></noscript>
   </head>
   <body class="is-preload">
     <!-- Wrapper -->
     
-    <div id="wrapper">
+<div id="wrapper"> 
       <!-- Header -->
       <header id="header">
         <div class="logo">
@@ -119,13 +119,13 @@
 
           <div class="gallery-buttons">
             <ul>
-              <li><button id="photosBtn">Nos Photos</button></li>
-              <li><button id="videoBtn">Nos Vidéo</button></li>
-              <li><button id="familysBtn">Fighting <span class="clr">Family</span></button></li>
+              <li class="button" id="photosBtn">Nos Photos</li>
+              <li class="button" id="videoBtn">Nos Vidéo</li>
+              <li class="button" id="familysBtn">Fighting <span class="clr">Family</span></li>
             </ul>
           </div>
 
-        <!-- Nos Photos -->
+        <!-- Nos Photos carousel -->
           <div class="image main">
             <div class="carousel" data-carousel>
               <button class="carousel-button prev material-icons" data-carousel-button="prev">
@@ -245,7 +245,7 @@
             <div class="profile-container">
               <div class="profile">
                 <a href="#">
-                  <div class="profile-img" style="background-image: url('/images/models/action2.jpg')"></div>
+                  <div class="profile-img" style="background-image: url('./images/models/action2.jpg')"></div>
                   <div class="profile-description">
                     <h3>Sanna</h3>
                     <p>Description de Sanna...</p>
@@ -254,7 +254,7 @@
               </div>
               <div class="profile">
                 <a href="#">
-                  <div class="profile-img" style="background-image: url('/images/models/action1.jpg')"></div>
+                  <div class="profile-img" style="background-image: url('./images/models/action1.jpg')"></div>
                   <div class="profile-description">
                     <h3>Rachid</h3>
                     <p>Description de Rachid...</p>
@@ -265,52 +265,10 @@
           </div>
         
           <!-- Section Nos Boxeurs -->
-          <div class="family-section" id="boxersSection">
-            <h3 class="clr">Nos Boxeurs</h3>
-        
-            <!-- Section Nos Compétiteurs -->
-            <div class="family-section" id="competitorsSection">
-        
-              <div class="profile-container">
-                <div class="profile">
-                  <div class="profile-img" style="background-image: url('/images/models/kileur.jpg')"></div>
-                  <h4>kileur</h4>
-                </div>
-                <div class="profile">
-                  <div class="profile-img" style="background-image: url('/images/models/robin.jpg')"></div>
-                  <h4>Robin</h4>
-                </div>
-                <div class="profile">
-                  <div class="profile-img" style="background-image: url('/images/models/maelkileur.jpg')"></div>
-                  <h4>Mael</h4>
-                </div>
-                <div class="profile">
-                  <div class="profile-img" style="background-image: url('/images/models/maelnasta.jpg')"></div>
-                  <h4>youcef</h4>
-                </div>
-              </div>
-            </div>
-        
-            <!-- Section Nos Loisirs -->
-            <div class="family-section" id="leisureSection">
-        
-              <div class="profile-container">
-                <div class="profile">
-                  <div class="profile-img" style="background-image: url('/images/models/blesseur.jpg')"></div>
-                  <h4>camillia</h4>
-                </div>
-                <div class="profile">
-                  <div class="profile-img" style="background-image: url('/images/models/conseilRing.jpg')"></div>
-                  <h4>ismail</h4>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <a class="clr" href="#about">Discipline</a>
         </article>
 
-        <!-- FIN Galerie -->
 
 
         <!-- Disipline -->
@@ -318,8 +276,8 @@
           <h2 class="major">ACTIVITÉS SPORTIVES</h2>
           <!-- PHOTO DE COUVERTURE -->
           
-          <button id="toggleActivities" class="toggleButton">Activités</button>
-          <button id="togglePlanning" class="toggleButton">Planning</button>
+          <a class="button" id="toggleActivities" class="toggleButton">Activité</a>
+          <a class="button" id="togglePlanning" class="toggleButton">Planning</a>
           
 <!-- ------------Activité--------------- -->
           <div class="gallery-buttons">
@@ -428,7 +386,7 @@
 
 
   <!-- ---------planning -->
-  <section id="planning" class="planning-section" style="display: none;">
+  <section id="planning" class="planning-section" style="display: block;">
     <span class="image main"><img src="./images/models/planningimg.png" alt="planning" /></span>
     <object data="votre_fichier.pdf" type="application/pdf" width="100%" height="600px">
       <button><a href="./images/models/planning2023-2024_84a1e5b6-cb92-44dd-a0c8-7c9ef4117c40.pdf">Télécharger</a></button> 
@@ -436,7 +394,7 @@
     </object>
   </section>
 
-          <a class="clr"href="#enregistrement">S'inscrire</a>
+          <a class="clr"href="#adhesion">S'inscrire</a>
         </article>
         <!-- FIN Disipline -->
 
@@ -485,68 +443,112 @@
         <!-- Adhésion -->
         <article id="adhesion">
             <h2 class="major">Adhésion</h2>
-            <p>ADHESION 2023 / 2024
-DE SEPTEMBRE À JUIN
-COURS ADULTES A PARTIR DE 13 ANS : 
-8 cours / semaine en illimité = 321 € licence comprise (règlement par chèque possible en 3 x 107 € à l’ordre du Club )
-
-COURS ADOS 10 – 12 ANS :
-2 cours / semaine en illimité = 309 € licence comprise (règlement par chèque possible en 3 x 103 € à l’ordre du Club )
-
-COURS ENFANTS 7 – 9 ANS :
-1 cours / semaine = 190 € licence comprise (règlement par chèque possible en 2 x 95 € à l’ordre du Club )</p>
+            <h3>ADHESION 2024 / 2025</h3>
+            <p> DE SEPTEMBRE À JUIN <br>
+              <span class="clr"> COURS ADULTES A PARTIR DE 13 ANS </span><br>
+              <p>nanani nanaa on verra</p><br>
+              <span class="clr"> COURS ADOS 10 – 12 ANS </span><br>
+              <p>nanani nanaa on verra</p><br>
+              <span class="clr"> COURS ENFANTS 7 – 9 ANS </span><br>
+              <p>nanani nanaa on verra</p><br>
+            </p>
+            <a class="button" href="#enregistrement">S'inscrire</a></button>
+            <a class="button" href="#contact">nous Contacter</a></button>
         </article>
 
         <!-- FIN Planning -->
 
 
         <!-- FOrumulaire d'inscription -->
-
+        
         <article id="enregistrement">
           <h2 class="major">Inscription</h2>
           <form id="inscriptionForm">
             <h2>Formulaire d'Inscription</h2>
-            <p>
-              Veuillez remplir le formulaire ci-dessous et l'imprimer. Une fois
-          complété, veuillez ramener le formulaire à notre salle pour
-          finaliser l'inscription.
-            </p>
+            
+            <label for="typeInscription">Type d'inscription :</label>
+            <select id="typeInscription" name="typeInscription" onchange="toggleAutorisationParentale()" required>
+              <option value="adulte">Adulte</option>
+              <option value="mineur">Mineur</option>
+            </select>
+                  
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>
-        
+            
             <label for="prenom">Prénom :</label>
             <input type="text" id="prenom" name="prenom" required>
-        
+            
             <label for="dateNaissance">Date de Naissance :</label>
             <input style="color: black;" type="date" id="dateNaissance" name="dateNaissance" required>
-        
+            
             <label for="tel">Téléphone :</label>
             <input type="tel" id="tel" name="tel" required>
-        
+            
             <label for="adresseMail">Adresse E-mail :</label>
             <input type="email" id="adresseMail" name="adresseMail" required>
-        
+            
             <label for="adressePostal">Adresse Postale :</label>
             <input type="text" id="adressePostal" name="adressePostal" required>
-        
-            <label for="disciplines">Choix de Discipline (maintenez Ctrl/Cmd pour choisir plusieurs) :</label>
+            
+            <label for="disciplines">Choix de Discipline :</label>
             <select id="disciplines" name="disciplines" multiple required>
-                <option value="k1">K1</option>
-                <option value="boxeAnglaise">Boxe Anglaise</option>
-                <option value="CROSSFIT">CROSSFIT</option>
-                <option value="MMA">MMA</option>
+              <option value="k1">K1</option>
+              <option value="boxeAnglaise">Boxe Anglaise</option>
+              <option value="CROSSFIT">CROSSFIT</option>
+              <option value="MMA">MMA</option>
+              <option value="libre">cours libre</option>
+              <option value="femme">100% femme</option>
+              <option value="formule">Formule</option>                
+              <option value="autres">Autres</option>
             </select>
+            
+            <div id="autorisationParental" style="display: none;">
+              <h2>Autorisation Parentale</h2>
+              <p>Je soussigné(e),
+                
+                <input type="text" id="nomParental" name="nomParental" placeholder="Nom du parent" required>,
+                en tant que tuteur légal de l'enfant mineur 
+                
+                <input type="text" id="nomEnfant" name="nomEnfant" placeholder="Nom de l'enfant" required>,
+                donne mon autorisation pour que mon enfant puisse participer aux activités sportives au sein de la Fighting Academy.
+              <br>
+              - En cas d'accident, j'autorise le personnel sur place à apporter les premiers soins nécessaires à mon enfant.<br>            
+              - J'autorise également l'établissement à prendre des photos et vidéos de mon fils lors des sessions d'entraînement, diffusées sur le canal du club. Je comprends que cela peut être utilisé à des fins promotionnelles et d'archives.<br>
+            
+              <p>Choix : 
+                <select name="autorisation">
+                  <option value="oui">Oui</option>
+                  <option value="non">Non</option>
+                </select>
+              </p>
+             
+              Fait à 
+                
+                <input type="text" id="lieu" name="lieu" placeholder="lieu" required><br>
+              Le 
+                
+                <input type="date" id="date" name="date" placeholder="Date" required>. <br>
+              <br>
+          
+              Signature du tuteur légal : ____________________________<br>
+            
+              <strong style="color: rgb(255, 10, 10);"> Veuillez imprimer ce document et le remettre à la Fighting Academy lors de la prochaine séance d'entraînement.</strong>
+            </p>
+            </div>
+            
+            <p class="confirmation confirmation-success" style="display: none;">Vos informations ont été enregistrées.</p>
 
-            <p class="confirmation" style="display: none;"> Vous donnée sont bien enregistrer vous pouvez maintenant imprimer la fiche</p>
-        
+            
             <button type="submit" onclick="sauvegarder(event)">Enregistrer</button>
-
+            
             <button type="button" onclick="Imprimer()" style="display: none;">Imprimer</button>
           </form>
         </article>
+        
 
+        
       </div>
-
+</div>
       <!-- Footer -->
       
       <footer id="footer">
@@ -567,20 +569,15 @@ COURS ENFANTS 7 – 9 ANS :
 
     <!-- BG -->
     <div id="bg" class="image1"></div>
-    <!-- <div id="bg"></div> -->
 
-    <!-- boîte modale -->
-    <div id="lightbox" class="lightbox">
-      <span class="close-btn" onclick="closeLightbox()">&times;</span>
-      <img src="" alt="Image en grand" id="lightbox-img">
-    </div>
+
     <!-- Scripts -->
     
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/browser.min.js"></script>
+    <script src="./assets/js/breakpoints.min.js"></script>
+    <script src="./assets/js/util.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

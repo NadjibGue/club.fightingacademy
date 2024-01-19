@@ -225,17 +225,31 @@ setInterval(updateCountdown, 1000);
 // Appeler la fonction une fois au chargement de la page pour éviter un délai initial
 updateCountdown();
 
-//-----------Formulaire d'inscriprtion
-// Formulaire d'inscription
+//-----------Formulaire d'inscriprtion-------------------------------
+
+
+// Fonction pour afficher/masquer la partie Autorisation Parentale
+function toggleAutorisationParentale() {
+  var typeInscription = document.getElementById("typeInscription").value;
+  var autorisationParentale = document.getElementById("autorisationParental");
+
+  if (typeInscription === "mineur") {
+      autorisationParentale.style.display = "block";
+  } else {
+      autorisationParentale.style.display = "none";
+  }
+}
+
+// Fonction pour sauvegarder les données et afficher le message de confirmation
 function sauvegarder(event) {
-  // Prevent default form submission
+  // Empêcher la soumission par défaut du formulaire
   event.preventDefault();
 
-  // Get the form and all input elements
+  // Récupérer le formulaire et tous les éléments de saisie
   var form = document.getElementById("inscriptionForm");
   var inputs = form.querySelectorAll("input[required], select[required]");
 
-  // Check if all required fields are filled
+  // Vérifier si tous les champs obligatoires sont remplis
   var allFieldsFilled = true;
   inputs.forEach(function (input) {
     if (!input.value) {
@@ -244,38 +258,44 @@ function sauvegarder(event) {
   });
 
   if (allFieldsFilled) {
-    // If all required fields are filled, show the confirmation message
+    // Si tous les champs obligatoires sont remplis, afficher le message de confirmation
     var confirmation = document.querySelector(".confirmation");
     confirmation.style.display = "block";
 
-    // Show the "Imprimer" button
+    // Afficher le bouton "Imprimer"
     var imprimerButton = document.querySelector('button[type="button"]');
     imprimerButton.style.display = "block";
+
+    // Stocker les données dans localStorage
+    var formData = {
+      nom: form.nom.value,
+      prenom: form.prenom.value,
+      dateNaissance: form.dateNaissance.value,
+      tel: form.tel.value,
+      adresseMail: form.adresseMail.value,
+      adressePostal: form.adressePostal.value,
+      disciplines: getSelectedOptions("disciplines"),
+      typeInscription: form.typeInscription.value,
+    };
+    localStorage.setItem("formulaireData", JSON.stringify(formData));
   } else {
-    // If any required field is not filled, you can display an error message or take other actions
+    // Si un champ obligatoire n'est pas rempli, afficher un message d'erreur ou prendre d'autres mesures
     alert("Veuillez remplir tous les champs obligatoires.");
   }
 }
 
-// script.js
+// Fonction pour imprimer le formulaire
 function Imprimer() {
-  // Récupérer les valeurs des champs du formulaire
-  var form = document.getElementById("inscriptionForm");
-  var formData = {
-    nom: form.nom.value,
-    prenom: form.prenom.value,
-    dateNaissance: form.dateNaissance.value,
-    tel: form.tel.value,
-    adresseMail: form.adresseMail.value,
-    adressePostal: form.adressePostal.value,
-    disciplines: getSelectedOptions("disciplines"),
-  };
+  // Récupérer les valeurs du formulaire depuis localStorage
+  var formData = JSON.parse(localStorage.getItem("formulaireData")) || {};
 
-  // Stocker les données dans localStorage
-  localStorage.setItem("formulaireData", JSON.stringify(formData));
+  // Afficher les données dans votre page impression.html
+  Object.keys(formData).forEach(function (key) {
+    document.getElementById(key).textContent = formData[key];
+  });
 
-  // Ouvrir la page impression.html dans une nouvelle fenêtre
-  window.open("impression.html", "_blank");
+  // Imprimer automatiquement
+  window.print();
 }
 
 // Fonction auxiliaire pour récupérer les options sélectionnées
@@ -290,16 +310,5 @@ function getSelectedOptions(id) {
   return selectedOptions.join(", ");
 }
 
-// -----article adesion
-
-document.getElementById("btnTarifs").addEventListener("click", function () {
-  document.getElementById("tarifsContent").style.display = "block";
-  document.getElementById("inscriptionContent").style.display = "none";
-});
-
-document
-  .getElementById("btnInscription")
-  .addEventListener("click", function () {
-    document.getElementById("tarifsContent").style.display = "none";
-    document.getElementById("inscriptionContent").style.display = "block";
-  });
+// Appeler la fonction pour afficher/masquer la partie Autorisation Parentale au chargement de la page
+toggleAutorisationParentale();

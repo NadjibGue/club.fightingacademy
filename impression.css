@@ -1,46 +1,90 @@
+/* Reset des styles par défaut pour le corps de la page */
 body {
-  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #f0f0f0;
+/* Style pour la page A4 */
+html, body {
+  height: 297mm;
+  width: 210mm;
 }
 
-#logo {
-  width: 100px; /* Ajustez la largeur du logo selon vos besoins */
+/* Centrage de la page */
+body {
+  margin: 10mm auto;
+  background-color: #f2f2f2; /* Fond gris clair */
+  padding: 20px; /* Espacement intérieur */
 }
 
-#entreprise {
-  font-size: 1.5em;
-  font-weight: bold;
+/* Style pour le formulaire d'inscription */
+#formulaire {
+  margin-top: 20px;
+  margin-left: 40px;
 }
 
-#formulaire,
-#infosSupplementaires {
-  margin: 20px;
+/* Style pour le conteneur des infos aligné à droite avec un soulignement */
+div.info-container {
+  text-align: left;
 }
+
+/* Style pour tous les spans avec la classe "info" à l'intérieur du conteneur */
+ span.info {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 25px; /* Ajustez selon vos besoins */
+  text-decoration: underline;
+}
+
 
 label {
   display: block;
   margin-bottom: 5px;
+}
+
+/* Style pour les informations supplémentaires */
+#infosSupplementaires {
+  margin-top: 20px;
+  background-color: #fff; /* Fond blanc */
+  padding: 20px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+.liste {
+  margin-bottom: 20px;
+}
+
+/* Styles pour la liste d'équipement nécessaire */
+#infosSupplementaires ul {
+  list-style-type: disc; /* Liste à puces */
+  padding-left: 20px; /* Espacement à gauche */
+}
+.confirmation-success {
+  color: green;
+  font-weight: bold; /* Facultatif : pour rendre le texte en gras */
+}
+/* Style pour le lien vers les règles de la salle */
+#infosSupplementaires a {
+  color: #0066cc;
+  text-decoration: none;
   font-weight: bold;
 }
 
-span {
-  display: inline-block;
-  margin-bottom: 10px;
+#infosSupplementaires a:hover {
+  text-decoration: underline;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+/* Style pour le pied de page */
+footer {
+  margin-top: 20px;
+  text-align: center;
 }
 
-a {
-  color: #007bff;
-  
+/* Nouveau style pour le logo à droite, un peu plus petit */
+#logo {
+  float: right;
+  max-width: 100px; /* Ajuster la largeur selon vos besoins */
+  height: auto;
 }
+
+/* Ajoutez d'autres styles au besoin */

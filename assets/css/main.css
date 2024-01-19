@@ -1,5 +1,8 @@
-@import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+
+
+/* Importation de la police depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600');
+
 
 /*
 	Dimension by HTML5 
@@ -671,6 +674,7 @@ input, select, textarea {
 			position: absolute;
 			top: 0;
 			width: 100%;
+			z-index: 99;
 		}
 
 		.image img {
@@ -1168,14 +1172,14 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/models/overlay.png");
 			background-size: auto,
  256px 256px;
 			background-position: center,
  center;
 			background-repeat: no-repeat,
  repeat;
-			z-index: 2;
+			z-index: 99;
 		}
 
 		 #bg:after {
