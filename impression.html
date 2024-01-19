@@ -1,108 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./impression.css" media="print" />
-  <link rel="stylesheet" href="./impression.css" />
-  <title>Formulaire d'Inscription</title>
-</head>
-<body>
-  <header>
-    <img id="logo" src="./images/logo/logo.png" alt="Logo de l'entreprise" />
-    <div id="entreprise">
-      <p>Fighting Academy</p>
-      <p>1 place Alfred Sauvy</p>
-      <p>31270 Cugnaux</p>
-      <p>07 82 69 59 86</p>
-      <p>fightingacademy@gmail.com</p>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./impression.css" media="print" />
+    <link rel="stylesheet" href="./impression.css" />
+    <title>Formulaire d'Inscription</title>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="./images/logo/logo.png" alt="Logo de l'entreprise" />
+      <div id="entreprise">
+        <ul>
+          <li>Fighting Academy</li>
+          <li>1 place Alfred Sauvy</li>
+          <li>31270 Cugnaux</li>
+          <li>07 82 69 59 86</li>
+          <li>fightingacademy@gmail.com</li>
+        </ul>
+      </div>
+    </header>
 
-  <center><h1>Formulaire d'Inscription</h1></center>
-  <section id="formulaire">
-    <h3>Renseignements :</h3>
-    <div>
-      <label for="typeInscription">Type d'inscription :</label>
-      <span class="info" id="typeInscription"></span>
-    </div>
-    
-<div class="info-container">
-  <div>
-    <label for="nom">Nom : <span class="info" id="nom"></span></label>
-  </div>
+    <center><h1>Formulaire d'Inscription</h1></center>
+    <section id="formulaire">
+      <h4>Renseignements :</h4>
+      <div>
+        <label for="typeInscription"
+          >Type d'inscription : <span class="info" id="typeInscription"></span
+        ></label>
+      </div>
 
-  <div>
-    <label for="prenom">Prénom : <span class="info" id="prenom"></span></label>
-  </div>
+      <div class="info-container">
+        <div>
+          <label for="nom">Nom : <span class="info" id="nom"></span></label>
+        </div>
 
-  <div>
-    <label for="dateNaissance">Date de Naissance : <span class="info" id="dateNaissance"></span></label>
-  </div>
+        <div>
+          <label for="prenom"
+            >Prénom : <span class="info" id="prenom"></span
+          ></label>
+        </div>
 
-  <div>
-    <label for="tel">Téléphone : <span class="info" id="tel"></span></label>
-  </div>
+        <div>
+          <label for="dateNaissance"
+            >Date de Naissance : <span class="info" id="dateNaissance"></span
+          ></label>
+        </div>
 
-  <div>
-    <label for="adresseMail">Adresse E-mail : <span class="info" id="adresseMail"></span></label>
-  </div>
+        <div>
+          <label for="tel"
+            >Téléphone : <span class="info" id="tel"></span
+          ></label>
+        </div>
 
-  <div>
-    <label for="adressePostal">Adresse Postale : <span class="info" id="adressePostal"></span></label>
-  </div>
+        <div>
+          <label for="adresseMail"
+            >Adresse E-mail : <span class="info" id="adresseMail"></span
+          ></label>
+        </div>
 
-  <div>
-    <label for="disciplines">Choix de Discipline : <span class="info" id="disciplines"></span></label>
-  </div>
-</div>
+        <div>
+          <label for="adressePostal"
+            >Adresse Postale : <span class="info" id="adressePostal"></span
+          ></label>
+        </div>
 
-  </section>
+        <div>
+          <label for="disciplines"
+            >Choix de Discipline : <span class="info" id="disciplines"></span
+          ></label>
+        </div>
+      </div>
+    </section>
 
-  <section id="infosSupplementaires">
-    <div class="liste">
-      <h3>Pièces à fournir :</h3>
+    <section id="infosSupplementaires">
+      <div class="liste">
+        <h3>Pièces à fournir :</h3>
+        <ul>
+          <li>Une pièce d'identité, deux (2) photos, un certificat médical</li>
+          <li>
+            Une cotisation à régler, soit <span id="prix"></span> €, en espèce
+            ou par chèque à l'ordre de SAS Fighting Academy
+          </li>
+          <li>Équipement obligatoire</li>
+        </ul>
+      </div>
+      <h3>Équipement nécessaire :</h3>
       <ul>
-        <li>Une pièce d'identité, deux (2) photos, un certificat médical</li>
-        <li>Une cotisation à régler, soit <span id="prix"></span> €, en espèce ou par chèque à l'ordre de SAS Fighting Academy</li>
-        <li>Équipement obligatoire</li>
+        <li>Gants de boxe</li>
+        <li>Protège-tibias</li>
+        <li>Protège-dent</li>
+        <li>Kokki</li>
       </ul>
-    </div>
-    <p>Équipement nécessaire :</p>
-    <ul>
-      
-      <li>Gants de boxe</li>
-      <li>Protège-tibias</li>
-      <li>Protège-dent</li>
-      <li>Kokki</li>
+      <p>
+        Lors de votre inscription, nous pouvons vous prêter le matériel
+        nécessaire uniquement pour la séance d'essai. <br />
+        Cependant, si vous choisissez de vous joindre à nous, <br />
+        <br />
+        <i
+          ><strong>
+            *l'acquisition de votre propre équipement est obligatoire pour
+            garantir la protection de tous*.</strong
+          >
+        </i>
+        <br />
+        <br />
+        Vous avez la possibilité de vous équiper dans notre boutique<strong>
+          Fighting Store</strong
+        >
+      </p>
+    </section>
 
-    </ul>
-    <p>
-      Lors de votre inscription, nous pouvons vous prêter le matériel nécessaire uniquement pour la séance d'essai. Cependant, si vous choisissez de vous joindre à nous, l'acquisition de votre propre équipement est obligatoire pour garantir la protection de tous. 
-      Vous avez la possibilité de vous équiper dans notre boutique<strong> Fighting Store</strong>     
-    <p>Consultez <a href="regles.html">nos règles de la salle</a> pour plus d'informations.</p>
-  </section>
+    <section id="autorisationParental">
+      <h2>Autorisation Parentale</h2>
+      <p>
+        Je soussigné(e), <span class="info" id="nomParental"></span>, en tant
+        que tuteur légal de <span class="info" id="nomEnfant"> </span>, <br />
+        <br />
+        donne mon autorisation pour que mon enfant puisse participer aux
+        activités sportives au sein de la Fighting Academy. <br />
+        <br />
 
+        En cas d'accident, j'autorise le personnel sur place à apporter les
+        premiers soins nécessaires à mon enfant. <br />
+        <br />
 
-  
-<section id="autorisationParental">
-  <h2>Autorisation Parentale</h2>
-  <p>Je soussigné(e), <span id="nomParental"></span>, en tant que tuteur légal de l'enfant mineur <ins>[Nom de l'enfant]</ins>, donne mon autorisation pour que mon enfant puisse participer aux activités sportives au sein de la Fighting Academy.</p>
+        J'autorise également l'établissement à prendre des photos et vidéos de
+        mon fils lors des sessions d'entraînement, diffusées sur le canal du
+        club. <br />
+        <br />
 
-  <p>En cas d'accident, j'autorise le personnel sur place à apporter les premiers soins nécessaires à mon enfant.</p>
+        Choix : <span class="info" id="autorisationChoix"></span> <br />
+        <br />
 
-  <p>J'autorise également l'établissement à prendre des photos et vidéos de mon fils lors des sessions d'entraînement, diffusées sur le canal du club. Je comprends que cela peut être utilisé à des fins promotionnelles et d'archives.</p>
+        Fait à <span class="info" id="lieu"></span>, le
+        <span class="info" id="date"></span>. <br />
+        <br />
 
-  <p>Choix : <span id="autorisationChoix"></span></p>
+        Signature du tuteur légal :
+        <br />
 
-  <p>Fait à <ins><span id="lieu"></span></ins>, le <ins><span id="date"></span></ins>.</p>
+        <br />
+      </p>
+    </section>
 
-  <p>Signature du tuteur légal : ____________________________</p>
-
-  <p>Veuillez imprimer ce document et le remettre à la Fighting Academy lors de la prochaine séance d'entraînement.</p>
-</section>
-
-
-  <script src="./impression.js"></script>
-</body>
+    <script src="./impression.js"></script>
+  </body>
 </html>

@@ -12,7 +12,7 @@ html, body {
 
 /* Centrage de la page */
 body {
-  margin: 10mm auto;
+  margin: 0;
   background-color: #f2f2f2; /* Fond gris clair */
   padding: 20px; /* Espacement intérieur */
 }
@@ -27,31 +27,35 @@ body {
 div.info-container {
   text-align: left;
 }
-
+#entreprise ul{
+  list-style-type: none;
+}
 /* Style pour tous les spans avec la classe "info" à l'intérieur du conteneur */
- span.info {
+span.info {
   text-transform: uppercase;
   display: inline-block;
-  margin-left: 25px; /* Ajustez selon vos besoins */
+  margin-left: 10px; /* Ajustez selon vos besoins */
   text-decoration: underline;
 }
-
 
 label {
   display: block;
   margin-bottom: 5px;
 }
-
+p{
+  padding-top: 0%;
+}
 /* Style pour les informations supplémentaires */
 #infosSupplementaires {
-  margin-top: 20px;
-  background-color: #fff; /* Fond blanc */
-  padding: 20px; /* Espacement intérieur */
+  margin-top: 10px;
+  background-color: #adfd9f; /* Fond blanc */
+  padding: 10px; /* Espacement intérieur */
   border-radius: 5px; /* Coins arrondis */
 }
 
 .liste {
   margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 /* Styles pour la liste d'équipement nécessaire */
@@ -59,13 +63,10 @@ label {
   list-style-type: disc; /* Liste à puces */
   padding-left: 20px; /* Espacement à gauche */
 }
-.confirmation-success {
-  color: green;
-  font-weight: bold; /* Facultatif : pour rendre le texte en gras */
-}
+
 /* Style pour le lien vers les règles de la salle */
 #infosSupplementaires a {
-  color: #0066cc;
+  color: #0a76e3;
   text-decoration: none;
   font-weight: bold;
 }
@@ -76,7 +77,7 @@ label {
 
 /* Style pour le pied de page */
 footer {
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -88,3 +89,27 @@ footer {
 }
 
 /* Ajoutez d'autres styles au besoin */
+
+@media print {
+  body {
+    size: A4;
+    margin: 0;
+  }
+
+  section {
+    page-break-before: auto;
+  }
+
+  /* Ajoutez d'autres styles d'impression ici */
+}
+#autorisationParental h2{
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 0%;
+  margin-top:0 ;
+}
+
+#autorisationParental p{
+  text-align: justify;
+  padding: 20px;
+}

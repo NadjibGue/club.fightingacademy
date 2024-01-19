@@ -730,11 +730,8 @@ input, select, textarea {
 			}
 			/* titre sure les image nos sport */
 			.image-title {
-				position: absolute;
-				top: 45%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				color: rgb(209, 52, 52);
+				text-align: center;
+				color: rgb(179, 129, 4);
 			  }
 			
 		@media screen and (max-width: 736px) {
@@ -1670,33 +1667,46 @@ input, select, textarea {
 		}
 
 /* Footer */
-
 #footer {
-    display: none;
-    position: fixed;
-    left: 25px;
-    bottom: 6%;
-    text-align: center;
+	display: none;
+	position: fixed;
+	left: 0px;
+	bottom: 6%;
+	text-align: center;
+	width: 100%; /* Ajustement pour occuper toute la largeur sur mobile */
+	box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
+	padding: 10px; /* Ajouter un peu de padding pour l'espace autour du texte */
+	background: #000000;
+	opacity: 0.8; /* Augmenter légèrement l'opacité */
   }
-
+  
   #toggleFooter {
-    cursor: pointer;
-    align-self: flex-start;
-    position: fixed;
-    bottom: 5%;
+	cursor: pointer;
+	align-self: flex-start;
+	position: fixed;
+	bottom: 5%;
+	left: 5%; /* Ajustement pour un meilleur positionnement sur mobile */
+	z-index: 100; /* Assurez-vous que le bouton de bascule est au-dessus du footer */
   }
-
+  
   .piedDePage {
-    background: #000;
-    opacity: 0.5;
-    display: block;
-    justify-content: space-around;
+	background: #000000;
+	opacity: 1;
+	display: block;
+	justify-content: space-around;
+	width: 100%; /* Ajustement pour occuper toute la largeur sur mobile */
   }
-
+  
   .infoFooter {
-    list-style: none;
-    padding: 0;
-    display: none; /* Cachez initialement la liste d'informations */
+	list-style: none;
+	padding: 0;
+	display: flex; /* Utilisez flex pour aligner les éléments horizontalement sur mobile */
+	flex-direction: column; /* Alignement vertical sur mobile */
+	text-align: center; /* Centrage du texte sur mobile */
+  }
+  
+  .infoFooter a {
+	color: #fff; /* Couleur du texte blanc pour les liens */
   }
   
   .copyright {
@@ -1707,35 +1717,26 @@ input, select, textarea {
 	text-transform: uppercase;
 	position: relative;
 	bottom: 5%;
+	text-align: center; /* Centrage du texte sur mobile */
   }
   
   body.is-article-visible #footer,
   body.is-preload #footer {
-	-moz-transform: scale(0.95);
-	-webkit-transform: scale(0.95);
-	-ms-transform: scale(0.95);
 	transform: scale(0.95);
-	-moz-filter: blur(0.1rem);
-	-webkit-filter: blur(0.1rem);
-	-ms-filter: blur(0.1rem);
 	filter: blur(0.1rem);
 	opacity: 0;
   }
-		body.is-article-visible #footer {
-			-moz-transform: scale(0.95);
-			-webkit-transform: scale(0.95);
-			-ms-transform: scale(0.95);
-			transform: scale(0.95);
-			-moz-filter: blur(0.1rem);
-			-webkit-filter: blur(0.1rem);
-			-ms-filter: blur(0.1rem);
-			filter: blur(0.1rem);
-			opacity: 0;
-		}
-
-		body.is-preload #footer {
-			opacity: 0;
-		}
+  
+  body.is-article-visible #footer {
+	transform: scale(0.95);
+	filter: blur(0.1rem);
+	opacity: 0;
+  }
+  
+  body.is-preload #footer {
+	opacity: 0;
+  }
+  
 
 	/* MODELS CAROURSSELL */
 

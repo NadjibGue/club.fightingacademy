@@ -226,17 +226,16 @@ setInterval(updateCountdown, 1000);
 updateCountdown();
 
 //-----------Formulaire d'inscriprtion-------------------------------
-
-
+//script.js
 // Fonction pour afficher/masquer la partie Autorisation Parentale
 function toggleAutorisationParentale() {
   var typeInscription = document.getElementById("typeInscription").value;
   var autorisationParentale = document.getElementById("autorisationParental");
 
   if (typeInscription === "mineur") {
-      autorisationParentale.style.display = "block";
+    autorisationParentale.style.display = "block";
   } else {
-      autorisationParentale.style.display = "none";
+    autorisationParentale.style.display = "none";
   }
 }
 
@@ -285,17 +284,33 @@ function sauvegarder(event) {
 }
 
 // Fonction pour imprimer le formulaire
-function Imprimer() {
-  // Récupérer les valeurs du formulaire depuis localStorage
-  var formData = JSON.parse(localStorage.getItem("formulaireData")) || {};
 
-  // Afficher les données dans votre page impression.html
-  Object.keys(formData).forEach(function (key) {
-    document.getElementById(key).textContent = formData[key];
-  });
+function Imprimer(event) {
+  event.preventDefault(); // Empêcher la soumission par défaut du formulaire
 
-  // Imprimer automatiquement
-  window.print();
+  // Récupérer les données du formulaire
+  var form = document.getElementById("inscriptionForm");
+  var formData = {
+    nom: form.nom.value,
+    prenom: form.prenom.value,
+    dateNaissance: form.dateNaissance.value,
+    tel: form.tel.value,
+    adresseMail: form.adresseMail.value,
+    adressePostal: form.adressePostal.value,
+    disciplines: getSelectedOptions("disciplines"),
+    typeInscription: form.typeInscription.value,
+    nomParental: form.nomParental.value,
+    nomEnfant: form.nomEnfant.value,
+    autorisation: form.autorisation.value,
+    lieu: form.lieu.value,
+    date: form.date.value,
+  };
+
+  // Stocker les données dans localStorage
+  localStorage.setItem("formulaireData", JSON.stringify(formData));
+
+  // Rediriger vers la page impression.html
+  window.location.href = "impression.html";
 }
 
 // Fonction auxiliaire pour récupérer les options sélectionnées
