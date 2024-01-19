@@ -64,12 +64,7 @@ p{
   padding-left: 20px; /* Espacement à gauche */
 }
 
-/* Style pour le lien vers les règles de la salle */
-#infosSupplementaires a {
-  color: #0a76e3;
-  text-decoration: none;
-  font-weight: bold;
-}
+
 
 #infosSupplementaires a:hover {
   text-decoration: underline;
@@ -112,4 +107,5 @@ footer {
 #autorisationParental p{
   text-align: justify;
   padding: 20px;
+  font-size:10px;
 }
