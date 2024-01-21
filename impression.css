@@ -1,4 +1,7 @@
 /* Reset des styles par défaut pour le corps de la page */
+*{
+  font-size:small;
+}
 body {
   margin: 0;
   padding: 0;
@@ -29,6 +32,7 @@ div.info-container {
 }
 #entreprise ul{
   list-style-type: none;
+  font-size: smaller;
 }
 /* Style pour tous les spans avec la classe "info" à l'intérieur du conteneur */
 span.info {
@@ -47,9 +51,9 @@ p{
 }
 /* Style pour les informations supplémentaires */
 #infosSupplementaires {
-  margin-top: 10px;
+  margin: 10px  0;
   background-color: #adfd9f; /* Fond blanc */
-  padding: 10px; /* Espacement intérieur */
+  padding: 5px; /* Espacement intérieur */
   border-radius: 5px; /* Coins arrondis */
 }
 
@@ -60,8 +64,9 @@ p{
 
 /* Styles pour la liste d'équipement nécessaire */
 #infosSupplementaires ul {
-  list-style-type: disc; /* Liste à puces */
-  padding-left: 20px; /* Espacement à gauche */
+  list-style-type:square; /* Liste à puces */
+  padding-left: 25px; /* Espacement à gauche */
+  
 }
 
 
@@ -107,5 +112,5 @@ footer {
 #autorisationParental p{
   text-align: justify;
   padding: 20px;
-  font-size:10px;
+
 }

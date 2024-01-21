@@ -11,7 +11,7 @@
 */
 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, h1, h2, h3, h4, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -191,7 +191,7 @@ input, select, textarea {
 		margin: 0 0 2rem 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h6 {
 		color: #ffffff;
 		font-weight: 600;
 		line-height: 1.5;
@@ -237,6 +237,10 @@ input, select, textarea {
 
 	h5 {
 		font-size: 0.7rem;
+		text-align: center;
+		font-size: larger;
+		margin-top: 0%;
+		padding-top: 10px;
 	}
 
 	h6 {
@@ -406,6 +410,7 @@ input, select, textarea {
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
+	input[type="date"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -430,7 +435,8 @@ input, select, textarea {
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
-		input[type="tel"]:invalid,
+		input[type="tel"]:invalid,µ
+		input[type="date"],
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -440,6 +446,7 @@ input, select, textarea {
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
+		
 		select:focus,
 		textarea:focus {
 			background: rgba(255, 255, 255, 0.075);
@@ -473,6 +480,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
 	select {
 		height: 2.75rem;
 	}
@@ -1205,7 +1213,7 @@ input, select, textarea {
 		#bg.image3:after {
 			background-image: url("../../images/models/interieur.jpg");
 		}
-
+		
 
 
 		body.is-article-visible #bg:after {
@@ -1333,17 +1341,34 @@ input, select, textarea {
 				display: none;
 			}
 
-		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
-			border: solid 1px #ffffff;
-			border-radius: 100%;
-		}
-
+			#header .logo {
+				width: 5.5rem;
+				height: 5.5rem;
+				line-height: 5.5rem;
+				border: solid 1px #ffffff;
+				border-radius: 100%;
+				transition: transform 0.5s ease; /* Transition pour l'effet de survol */
+			}
+			
 			#header .logo .icon:before {
 				font-size: 2rem;
 			}
+			
+			/* Rotation lorsqu'il n'est pas survolé */
+			#header .logo:not(:hover) {
+				animation: flipLogo 9s infinite linear;
+			}
+			
+			/* Définition de l'animation flip */
+			@keyframes flipLogo {
+				from {
+					transform: perspective(400px) rotateY(0deg);
+				}
+				to {
+					transform: perspective(400px) rotateY(360deg);
+				}
+			}
+			
 
 		#header .content {
 			border-style: solid;
@@ -1925,7 +1950,7 @@ input, select, textarea {
     display: table-cell;
     padding: 2px;
     text-align: center;
-    font-size: 18px; /* Ajustez la taille de police selon vos préférences */
+    font-size: 12px; /* Ajustez la taille de police selon vos préférences */
   }
 
   #countdown-label {
@@ -1937,7 +1962,7 @@ input, select, textarea {
     background-color: #080a05a1; 
     font-family: 'Courier New', Courier, monospace; 
     font-weight: bold;
-    font-size: 19px; 
+    font-size: 12px; 
     letter-spacing: 3px; /* Espacement entre les caractères pour un aspect plus stylisé */
     color:rgb(215, 198, 124);
   }
@@ -1965,4 +1990,72 @@ input, select, textarea {
 
   td {
 	background-color: #7b6d6d;
+  }
+/* ---------------------------------contact -------------------------------------- */
+  /* Styles généraux du conteneur */
+  .modern-info {
+    text-align: center;
+    background: linear-gradient(45deg,#84ada9, #232020 );
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Animation pour le titre */
+  .modern-info h1 {
+    font-size: 24px;
+    margin: 0;
+    animation: bounce 2s infinite;
+  }
+
+  /* Animation de rebond */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Styles pour les détails */
+  .modern-info p,
+  .modern-info span {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  /* Styles pour le texte d'adresse */
+  .modern-info span[itemprop="address"] {
+    display: block;
+    font-size: 14px;
+  }
+
+  /* Animation de couleur pour le numéro de téléphone */
+  .modern-info span[itemprop="telephone"] {
+    animation: colorChange 2s infinite;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  /* Animation de changement de couleur */
+  @keyframes colorChange {
+    0%, 100% {
+      color: #fff;
+    }
+    50% {
+      color: #f39c12;
+    }
+  }
+
+  /* Lien cliquable pour l'e-mail */
+  .modern-info span[itemprop="email"] {
+    cursor: pointer;
+    text-decoration: underline;
   }

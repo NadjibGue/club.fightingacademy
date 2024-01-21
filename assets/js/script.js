@@ -89,6 +89,7 @@ var footer = document.getElementById("footer");
 var toggleFooter = document.getElementById("toggleFooter");
 var infoFooter = document.getElementById("infoFooter");
 
+// Gestionnaire d'événements pour afficher/masquer le footer lors du clic sur les trois barres
 toggleFooter.addEventListener("click", function (event) {
   event.stopPropagation(); // Empêche la propagation du clic pour éviter la fermeture immédiate
 
@@ -259,11 +260,11 @@ function sauvegarder(event) {
   if (allFieldsFilled) {
     // Si tous les champs obligatoires sont remplis, afficher le message de confirmation
     var confirmation = document.querySelector(".confirmation");
+    var imprimerButton = document.querySelector(".imprimer");
+    var enregistrer = document.querySelector(".enregistrer");
     confirmation.style.display = "block";
-
-    // Afficher le bouton "Imprimer"
-    var imprimerButton = document.querySelector('button[type="button"]');
     imprimerButton.style.display = "block";
+    enregistrer.style.display = "none";
 
     // Stocker les données dans localStorage
     var formData = {
