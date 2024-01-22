@@ -2059,3 +2059,21 @@ input, select, textarea {
     cursor: pointer;
     text-decoration: underline;
   }
+  /* icon pour fighting stor */
+
+  @keyframes shake {
+	0%, 100% {
+	  transform: translateX(0);
+	}
+	25%, 75% {
+	  transform: translateY(-30px);
+	}
+	50% {
+	  transform: translateY(1px);
+	}
+  }
+  
+  .fa-shopping-bag {
+	animation: shake 5s infinite;
+  }
+  
